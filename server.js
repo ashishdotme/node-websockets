@@ -19,6 +19,6 @@ wss.on('connection', (ws) => {
 
 setInterval(() => {
   wss.clients.forEach((client) => {
-    client.send({"peopleCount": Math.floor(Math.random() * 11)});
+    client.send(JSON.stringify({"peopleCount": Math.floor(Math.random() * 11)}));
   });
 }, 30000);
