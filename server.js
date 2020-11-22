@@ -21,4 +21,4 @@ setInterval(() => {
   wss.clients.forEach((client) => {
     client.send(JSON.stringify({"peopleCount": Math.floor(Math.random() * 11)}));
   });
-}, 30000);
+}, 10000);
